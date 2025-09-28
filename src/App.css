@@ -54,6 +54,23 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: 1;
+    /* Mobile compatibility */
+    -webkit-playsinline: true;
+    -moz-playsinline: true;
+    -ms-playsinline: true;
+    playsinline: true;
+}
+
+/* Fallback background for mobile when video fails */
+.hero-section {
+    background-image: url('/Album.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-video:not([src]) {
+    display: none;
 }
 
 .hero-overlay {
