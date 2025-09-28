@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import CountdownTimer from './CountdownTimer';
 import MobileVideoHandler from './MobileVideoHandler';
+import VideoFallback from './VideoFallback';
 
 const HeroSection = () => {
   const videoRef = useRef(null);
@@ -80,13 +81,15 @@ const HeroSection = () => {
         muted 
         loop 
         playsInline
-        preload="metadata"
+        preload="auto"
         webkit-playsinline="true"
         x5-playsinline="true"
         x5-video-player-type="h5"
         x5-video-player-fullscreen="true"
         controls={false}
+        poster="/Album.jpg"
       >
+        <source src="/DJI_mobile.mp4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
         <source src="/DJI_20250525053335_0032_D.MP4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
         <source src="/DJI_20250525053335_0032_D.MP4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -102,6 +105,7 @@ const HeroSection = () => {
       </div>
       
       <MobileVideoHandler videoRef={videoRef} />
+      <VideoFallback videoRef={videoRef} />
     </section>
   );
 };
