@@ -371,6 +371,10 @@ body {
     text-align: left;
 }
 
+.right-column .family-info {
+    text-align: right;
+}
+
 .family-label {
     font-family: 'Arima Madurai', sans-serif;
     font-size: 1.2rem;
@@ -393,6 +397,11 @@ body {
 .couple-names-main {
     text-align: center;
     margin: 20px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .groom-name,
@@ -417,6 +426,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .wedding-photo {

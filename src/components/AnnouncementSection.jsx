@@ -16,25 +16,24 @@ const AnnouncementSection = () => {
               <p className="parent-name">NGUYỄN XUÂN QUANG</p>
               <p className="parent-name">LÊ THỊ NGỌC LAN</p>
             </div>
-            
+          </div>
+          
+          <div className="center-image">
             <div className="couple-names-main">
               <h1 className="groom-name">THANH PHỤC</h1>
               <div className="ampersand-main">&</div>
               <h1 className="bride-name">KHÁNH HẠ</h1>
             </div>
-            
+            <img src="/Album.jpg" alt="Wedding Photo" className="wedding-photo" />
+          </div>
+          
+          <div className="right-column">
             <div className="family-info">
               <p className="family-label">Nhà gái</p>
               <p className="parent-name">DƯƠNG CÔNG KHANH</p>
               <p className="parent-name">TRƯƠNG THỊ THUÝ HƯƠNG</p>
             </div>
-          </div>
-          
-          <div className="center-image">
-            <img src="/Album.jpg" alt="Wedding Photo" className="wedding-photo" />
-          </div>
-          
-          <div className="right-column">
+            
             <div className="date-info">
               <div className="date-main">29.12.2025</div>
               <div className="date-english">DECEMBRE 29th 2025</div>
