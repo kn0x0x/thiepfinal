@@ -61,16 +61,35 @@ body {
     playsinline: true;
 }
 
-/* Fallback background for mobile when video fails */
-.hero-section {
-    background-image: url('/Album.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* Mobile video optimization */
+@media (max-width: 768px) {
+    .hero-video {
+        /* Force video to show on mobile */
+        display: block !important;
+        /* Optimize for mobile performance */
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        will-change: transform;
+    }
+    
+    .hero-section {
+        /* Remove background image on mobile to force video */
+        background-image: none;
+    }
 }
 
-.hero-video:not([src]) {
-    display: none;
+/* Fallback background only for desktop when video fails */
+@media (min-width: 769px) {
+    .hero-section {
+        background-image: url('/Album.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .hero-video:not([src]) {
+        display: none;
+    }
 }
 
 .hero-overlay {
