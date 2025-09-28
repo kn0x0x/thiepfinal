@@ -354,10 +354,18 @@ body {
 }
 
 .main-content {
-    display: grid;
-    grid-template-columns: 1fr 400px 1fr;
-    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     align-items: center;
+}
+
+.families-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
 }
 
 .left-column,
@@ -372,6 +380,14 @@ body {
 }
 
 .right-column .family-info {
+    text-align: right;
+}
+
+.left-family {
+    text-align: left;
+}
+
+.right-family {
     text-align: right;
 }
 
@@ -397,11 +413,6 @@ body {
 .couple-names-main {
     text-align: center;
     margin: 20px 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
 }
 
 .groom-name,
@@ -426,7 +437,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
 .wedding-photo {
@@ -441,7 +451,7 @@ body {
 .date-info {
     text-align: center;
     margin-top: 20px;
-    max-width: 420px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
